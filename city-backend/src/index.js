@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 
 //routes are /books & everything else throws a 404
 app.use("/cities", citiesRoutes);
-app.use("/api", swaggerUi.serve, swaggerUI.setup(swaggerDocs))
+app.use("/api", swaggerUiExpress.serve, swaggerUiExpress.setup(swaggerDocs))
 app.all("*", (req, res) => res.sendStatus(404));
 
 mongoose.connect("mongodb://mongo:27017/test").then(() => {

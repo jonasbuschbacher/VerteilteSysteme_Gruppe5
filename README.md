@@ -32,14 +32,13 @@ Response:
 
 ```
 {
+	"id": "1",
 
-	"city": "Paris",
+	"name": "Paris",
 	
 	"population": "2 Millionen",
 	
-	"county": "Frankreich",
-	
-	"highest_building": "Eifelturm (324m)"
+	"county": "Frankreich"		
 	
 }
 ```
@@ -61,14 +60,13 @@ Response
 ```
 {
 
-	"capital": "Paris",
+	"id": "1",
 	
-	"population": "67 Millionen",
+	"name": "Frankreich",
 	
-	"surface_area": "550.000 qkm",
+	"capital": "Paris"
 	
-	"longest_river": "Loire (1006km)"
-	
+		
 }
 ```
 
@@ -87,10 +85,9 @@ Response
 
 ```
 {
+	"id": "1",
 
-	"continent": "Europa",
-	
-	"population": "750 Millionen"
+	"name": "Europa",
 	
 	"countries_amount": "47"
 	

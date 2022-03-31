@@ -21,7 +21,7 @@ export const getCityById = (req, res) => {
   let city = cities.find((b) => b.id == req.params.id);
   res.status(200).send(city);
 };
-export const getCityByTitle = (req, res) => {
+export const getCityByName = (req, res) => {
   let result = cites.filter((city) => city.title == req.query.title);
   res.status(200).send(result);
 };

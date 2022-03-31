@@ -5,7 +5,7 @@ import {
   getCityByName,
   addCity,
   newCityValidators,
-} from "../controllers/cityControllers.js.js";
+} from "../controllers/cityController.js";
 
 
 const router = express.Router();
