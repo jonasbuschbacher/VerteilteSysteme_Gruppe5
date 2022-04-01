@@ -2,8 +2,7 @@
 import mongoose from "mongoose";
 
 const continentSchema = new mongoose.Schema({
-  id: Number,
-  name: String,
+  contientName: String,
   countries_amount: Number,  
 });
 

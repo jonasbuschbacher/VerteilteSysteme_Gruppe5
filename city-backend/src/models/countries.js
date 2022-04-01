@@ -2,8 +2,7 @@
 import mongoose from "mongoose";
 
 const countrySchema = new mongoose.Schema({
-  id: Number,
-  name: String,
+  countryName: String,
   capital: String,  
 });
 
