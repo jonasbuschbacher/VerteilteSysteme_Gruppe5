@@ -1,19 +1,6 @@
 import { check, validationResult } from "express-validator";
+import { City } from "../models/cities";
 
-const cities = [
-  {
-    id: 0,
-    name: "Paris",
-    population: "2 Millionen",
-    country: "Frankreich",
-  },
-  {
-    id: 1,
-    name: "Berlin",
-    population: "4 Millionen",
-    country: "Deutschland",
-  },
-];
 export const getCities = (req, res) => {
   res.status(200).send(cities);
 };

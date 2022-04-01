@@ -15,4 +15,5 @@ router.get("/:id", getCityById);
 router.get("/search", getCityByName);
 router.post("/", newCityValidators, addCity);
 
+
 export default router;
