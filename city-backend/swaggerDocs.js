@@ -10,11 +10,11 @@ const swaggerDocs = {
       },
     },
     host: "localhost:3000",
-    basePath: "/books",
+    basePath: "/cities",
     tags: [
       {
-        name: "Books",
-        description: "books in the database",
+        name: "Cities",
+        description: "cities in the database",
       },
     ],
     consumes: ["application/json"],
@@ -22,13 +22,13 @@ const swaggerDocs = {
     paths: {
       "/": {
         get: {
-          tags: ["Books"],
-          summary: "Get all books in the system",
+          tags: ["Cities"],
+          summary: "Get all Cities in the system",
           responses: {
             200: {
               description: "OK",
               schema: {
-                $ref: "#/definitions/Book",
+                $ref: "#/definitions/City",
               },
             },
           },
@@ -36,15 +36,15 @@ const swaggerDocs = {
       },
       "/{id}": {
         get: {
-          tags: ["Books"],
-          summary: "Get a specific book by id",
+          tags: ["Cities"],
+          summary: "Get a specific city by id",
           parameters: [
             {
               name: "id",
               in: "body",
-              description: "Id of the book searched for",
+              description: "Id of the city searched for",
               schema: {
-                $ref: "#/definitions/Book",
+                $ref: "#/definitions/City",
               },
             },
           ],
@@ -52,7 +52,7 @@ const swaggerDocs = {
             200: {
               description: "OK",
               schema: {
-                $ref: "#/definitions/Book",
+                $ref: "#/definitions/City",
               },
             },
           },
@@ -60,15 +60,15 @@ const swaggerDocs = {
       },
       "/search": {
         get: {
-          tags: ["Books"],
-          summary: "Get a specific book by title",
+          tags: ["Cities"],
+          summary: "Get a specific city by name",
           parameters: [
             {
-              name: "title",
+              name: "name",
               in: "path",
-              description: "Title of the book searched for",
+              description: "Name of the city searched for",
               schema: {
-                $ref: "#/definitions/Book",
+                $ref: "#/definitions/City",
               },
             },
           ],
@@ -76,7 +76,7 @@ const swaggerDocs = {
             200: {
               description: "OK",
               schema: {
-                $ref: "#/definitions/Book",
+                $ref: "#/definitions/City",
               },
             },
           },
@@ -84,15 +84,15 @@ const swaggerDocs = {
       },
       "/add": {
         post: {
-          tags: ["Books"],
-          summary: "Add a new book",
+          tags: ["Cities"],
+          summary: "Add a new city",
           parameters: [
             {
-              name: "book",
+              name: "city",
               in: "body",
-              description: "Book to be added",
+              description: "City to be added",
               schema: {
-                $ref: "#/definitions/Book",
+                $ref: "#/definitions/City",
               },
             },
           ],
@@ -100,7 +100,7 @@ const swaggerDocs = {
             201: {
               description: "Created",
               schema: {
-                $ref: "#/definitions/Book",
+                $ref: "#/definitions/City",
               },
             },
           },
@@ -109,7 +109,7 @@ const swaggerDocs = {
     },
     definitions: {
       Book: {
-        required: ["title", "author"],
+        required: ["name", "author"],
         properties: {
           _id: {
             type: "string",
