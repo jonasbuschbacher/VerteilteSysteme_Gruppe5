@@ -14,17 +14,17 @@ Dozentin: Lisa Trovato-Monastra
 
 ## StädteInfos-API
 
-Die API gibt verschiedene Infos über Städte, deren Land und deren Kontinent zurück.
+Die API gibt verschiedene Infos über Städte, deren Land und deren Kontinent zurück. Die API bildest die Grundlage für einen Reiseführer.  
 
 
 
 ## API Endpoint 1
 
-URI: /city-info/cities/
+URI: /cities/
 
-Beispiel: /city-info/cities/?city_id=1
+Beispiel: /cities/?id=1
 
-Parameter: city_id (int)
+Parameter: id (int)
 
 Response-Type: application/json
 
@@ -47,11 +47,11 @@ Response:
 
 ## API Endpoint 2
 
-URI: /city-info/countries/
+URI: /countries/
 
-Beispiel: /city-info/cities/?country_id=1
+Beispiel: /countries/?id=1
 
-Parameter: country_id (int)
+Parameter: id (int)
 
 Response-Type: application/json
 
@@ -73,11 +73,11 @@ Response
 
 ## API Endpoint 3
 
-URI: /city-info/contitents/
+URI: /contitents/
 
-Beispiel: /city-info/contitents/?continent_id=1
+Beispiel: /contitents/?id=1
 
-Parameter: city_id (int)
+Parameter: id (int)
 
 Response-Type: application/json
 

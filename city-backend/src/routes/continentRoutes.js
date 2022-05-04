@@ -4,6 +4,8 @@ import {
   getContinentById,
   getContinentByName,
   addContinent,
+  updateContinent,
+  deleteContinent,
   newContientValidators,
 } from "../controllers/continentController.js";
 
@@ -14,6 +16,8 @@ router.get("/", getContinents);
 router.get("/:id", getContinentById);
 router.get("/search", getContinentByName);
 router.post("/", newContientValidators, addContinent);
+router.put("/:id",newContientValidators,updateContinent);
+router.delete("/:id",deleteContinent);
 
 
 export default router;

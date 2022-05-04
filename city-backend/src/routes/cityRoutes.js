@@ -4,6 +4,8 @@ import {
   getCityById,
   getCityByName,
   addCity,
+  updateCity,
+  deleteCity,
   newCityValidators,
 } from "../controllers/cityController.js";
 
@@ -14,6 +16,8 @@ router.get("/", getCities);
 router.get("/:id", getCityById);
 router.get("/search", getCityByName);
 router.post("/", newCityValidators, addCity);
+router.put("/:id",newCityValidators,updateCity);
+router.delete("/:id",deleteCity);
 
 
 export default router;

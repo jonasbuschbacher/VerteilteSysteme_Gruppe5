@@ -1,6 +1,8 @@
 import express from "express";
 import bodyParser from "body-parser";
 import citiesRoutes from "./routes/cityRoutes.js";
+import continentRoutes from "./routes/continentRoutes.js";
+import countryRoutes from "./routes/countryRoutes.js"
 import mongoose from "mongoose";
 import swaggerUiExpress from "swagger-ui-express";
 import swaggerDocs from "../swaggerDocs.js";
@@ -11,8 +13,10 @@ const port = 3000;
 
 app.use(bodyParser.json());
 
-//routes are /books & everything else throws a 404
+//routes are city, contitent, country related & everything else throws a 404
 app.use("/cities", citiesRoutes);
+app.use("/contients",continentRoutes);
+app.use("/countries", countryRoutes)
 app.use("/api", swaggerUiExpress.serve, swaggerUiExpress.setup(swaggerDocs))
 app.all("*", (req, res) => res.sendStatus(404));
 
