@@ -1,11 +1,12 @@
 import express from "express";
 import bodyParser from "body-parser";
-import citiesRoutes from "./routes/cityRoutes.js";
-import continentRoutes from "./routes/continentRoutes.js";
-import countryRoutes from "./routes/countryRoutes.js"
 import mongoose from "mongoose";
 import swaggerUiExpress from "swagger-ui-express";
 import swaggerDocs from "../swaggerDocs.js";
+
+import citiesRoutes from "./routes/cityRoutes.js";
+import continentRoutes from "./routes/continentRoutes.js";
+import countryRoutes from "./routes/countryRoutes.js"
 
 // complete application is here
 const app = express();
