@@ -10,7 +10,7 @@ import countryRoutes from "./routes/countryRoutes.js"
 
 // complete application is here
 const app = express();
-const port = 3000;
+const port = 4000;
 
 app.use(bodyParser.json());
 
