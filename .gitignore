@@ -128,3 +128,12 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# dependencies
+node_modules
+
+# ide settings
+.vscode
+
+# db logs
+.db
