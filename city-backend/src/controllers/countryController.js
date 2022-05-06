@@ -2,7 +2,7 @@ import { check, validationResult } from "express-validator";
 import { Country } from "../models/countries.js";
 
 export const getCountries = async (req, res) => {
-    res.set("Access-Control-Allow-Origin", "http://localhost:3000");
+    res.set("Access-Control-Allow-Origin", "http://localhost:4000");
     const countries = await Country.find();
     if(countries.length==0){
       return res.status(400).send({error: "Eintrag nicht gefunden."});

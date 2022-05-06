@@ -2,7 +2,7 @@ import { check, validationResult } from "express-validator";
 import { Continent } from "../models/continents.js";
 
 export const getContinents = async (req, res) => {
-    res.set("Access-Control-Allow-Origin", "http://localhost:3000");
+    res.set("Access-Control-Allow-Origin", "http://localhost:4000");
     const continents = await Continent.find();
     if(continents.length==0){
       return res.status(400).send({error: "Eintrag nicht gefunden."});
