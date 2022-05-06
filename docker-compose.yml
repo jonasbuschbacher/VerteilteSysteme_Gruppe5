@@ -1,6 +1,16 @@
 version: "3.4"
 
 services:
+  frontend:
+    image: node:17
+    container_name: frontend
+    build:
+      context: city-frontend
+      dockerfile: ./Dockerfile
+    ports:
+      - 4000:4000
+    depends_on:
+      - backend
   backend:
     image: node:17-alpine
     container_name: backend
@@ -18,7 +28,7 @@ services:
     container_name: mongo
     ports:
       - 27017:27017
-    volumes: 
+    volumes:
       - .db/:/data/db
     command:
       - --quiet
