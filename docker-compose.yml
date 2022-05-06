@@ -27,7 +27,7 @@ services:
     image: mongo:latest
     container_name: mongo
     ports:
-      - 27017:27017
+      - 27017:27016
     volumes:
       - .db/:/data/db
     command:

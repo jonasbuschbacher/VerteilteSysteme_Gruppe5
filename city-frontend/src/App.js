@@ -6,7 +6,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: [],
+      allData: [],
     };
     this.fetchDisplayData = this.fetchDisplayData.bind(this);
   }
@@ -16,7 +16,7 @@ class App extends React.Component {
   // as a state
   async fetchDisplayData() {
     let data = await fetchAllData();
-    this.setState({ data: data });
+    this.setState({ allData: data });
   }
 
   // this is displayed on the screen
@@ -29,9 +29,9 @@ class App extends React.Component {
         </button>
         <div className="data">
           {/* generates a div for every entry */}
-          {this.state.data.map((data, key) => (
+          {this.state.allData.map((ad, key) => (
             <div key={key}>
-              {data.id} 
+             Eintrag: {ad.cityName}. ID: {ad._id}
             </div>
           ))}
         </div>
