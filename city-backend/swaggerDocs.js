@@ -132,23 +132,192 @@ const swaggerDocs = {
           },
         },
       },
+      "/city/{id}": {
+        put: {
+          tags: ["City"],
+          summary: "Update a City",
+          parameters: [
+            {
+              name: "id",
+              in: "path",
+              description: "Id of the City to be updated",
+            },
+            {
+              name: "City",
+              in: "body",
+              description: "City to be updated",
+              schema: {
+                $ref: "#/definitions/NewCityBody",
+              },
+            },
+          ],
+          responses: {
+            200: {
+              description: "OK",
+              schema: {
+                $ref: "#/definitions/CityOkResponse",
+              },
+            },
+            400: {
+              description: "Bad Request",
+              schema: {
+                $ref: "#/definitions/BadRequest",
+              },
+            },
+          },
+        },
+      },
+      "/city/{id}": {
+        delete: {
+          tags: ["City"],
+          summary: "City to be deleted",
+          parameters: [
+            {
+              name: "id",
+              in: "path",
+              description: "Id of the City to be deleted",
+            },
+          ],
+          responses: {
+            200: {
+              description: "OK",
+              schema: {
+                $ref: "#/definitions/EntryDeleted",
+              },
+            },
+            400: {
+              description: "Bad Request",
+              schema: {
+                $ref: "#/definitions/BadRequest",
+              },
+            },
+          },
+        },
+      },
+
+
+
+      "/continent": {
+        get: {
+          tags: ["Continent"],
+          summary: "Get all continents in the system",
+          responses: {
+            200: {
+              description: "OK",
+              schema: {
+                $ref: "#/definitions/ContinentOkResponse",
+              },
+            },
+            400: {
+              description: "Bad Request",
+              schema: {
+                $ref: "#/definitions/BadRequest",
+              },
+            },
+          },
+        },
+      },
+      "/continent/{id}": {
+        get: {
+          tags: ["Continent"],
+          summary: "Get a specific continent by id",
+          parameters: [
+            {
+              name: "id",
+              in: "path",
+              description: "Id of the continent searched for",
+            },
+          ],
+          responses: {
+            200: {
+              description: "OK",
+              schema: {
+                $ref: "#/definitions/ContinentOkResponse",
+              },
+            },
+            400: {
+              description: "Bad Request",
+              schema: {
+                $ref: "#/definitions/BadRequest",
+              },
+            },
+          },
+        },
+      },
+      "/search/{continentName}": {
+        get: {
+          tags: ["Continent"],
+          summary: "Get a specific continent by name",
+          parameters: [
+            {
+              name: "name",
+              in: "path",
+              description: "Name of the continent searched for",
+            },
+          ],
+          responses: {
+            200: {
+              description: "OK",
+              schema: {
+                $ref: "#/definitions/ContinentOkResponse",
+              },
+            },
+            400: {
+              description: "Bad Request",
+              schema: {
+                $ref: "#/definitions/BadRequest",
+              },
+            },
+          },
+        },
+      },
+      "/continent/": {
+        post: {
+          tags: ["Continent"],
+          summary: "Add a new continent",
+          parameters: [
+            {
+              name: "continent",
+              in: "body",
+              description: "Continent to be added",
+              schema: {
+                $ref: "#/definitions/NewContinentBody",
+              },
+            },
+          ],
+          responses: {
+            201: {
+              description: "Created",
+              schema: {
+                $ref: "#/definitions/ContinentOkResponse",
+              },
+            },
+            400: {
+              description: "Bad Request",
+              schema: {
+                $ref: "#/definitions/BadRequest",
+              },
+            },
+          },
+        },
+      },
     },
-    "/cities/{id}": {
+    "/continent/{id}": {
       put: {
-        tags: ["Cities"],
-        summary: "Update a City",
+        tags: ["Continent"],
+        summary: "Update a continent",
         parameters: [
           {
             name: "id",
             in: "path",
-            description: "Id of the City to be updated",
+            description: "Id of the continent to be updated",
           },
           {
-            name: "City",
+            name: "Continent",
             in: "body",
-            description: "City to be updated",
+            description: "Continent to be updated",
             schema: {
-              $ref: "#/definitions/NewCityBody",
+              $ref: "#/definitions/NewContinentBody",
             },
           },
         ],
@@ -156,7 +325,7 @@ const swaggerDocs = {
           200: {
             description: "OK",
             schema: {
-              $ref: "#/definitions/CityOkResponse",
+              $ref: "#/definitions/ContinentOkResponse",
             },
           },
           400: {
@@ -168,15 +337,15 @@ const swaggerDocs = {
         },
       },
     },
-    "/cities/{id}": {
+    "/continent/{id}": {
       delete: {
-        tags: ["Cities"],
-        summary: "City to be deleted",
+        tags: ["Continent"],
+        summary: "Continent to be deleted",
         parameters: [
           {
             name: "id",
             in: "path",
-            description: "Id of the City to be deleted",
+            description: "Id of the continent to be deleted",
           },
         ],
         responses: {
@@ -195,24 +364,283 @@ const swaggerDocs = {
         },
       },
     },
+    
+
+
+    "/country": {
+      get: {
+        tags: ["Country"],
+        summary: "Get all countries in the system",
+        responses: {
+          200: {
+            description: "OK",
+            schema: {
+              $ref: "#/definitions/CountryOkResponse",
+            },
+          },
+          400: {
+            description: "Bad Request",
+            schema: {
+              $ref: "#/definitions/BadRequest",
+            },
+          },
+        },
+      },
+    },
+    "/country/{id}": {
+      get: {
+        tags: ["Country"],
+        summary: "Get a specific country by id",
+        parameters: [
+          {
+            name: "id",
+            in: "path",
+            description: "Id of the country searched for",
+          },
+        ],
+        responses: {
+          200: {
+            description: "OK",
+            schema: {
+              $ref: "#/definitions/CountryOkResponse",
+            },
+          },
+          400: {
+            description: "Bad Request",
+            schema: {
+              $ref: "#/definitions/BadRequest",
+            },
+          },
+        },
+      },
+    },
+    "/search/{countryName}": {
+      get: {
+        tags: ["Country"],
+        summary: "Get a specific country by name",
+        parameters: [
+          {
+            name: "name",
+            in: "path",
+            description: "Name of the country searched for",
+          },
+        ],
+        responses: {
+          200: {
+            description: "OK",
+            schema: {
+              $ref: "#/definitions/CountryOkResponse",
+            },
+          },
+          400: {
+            description: "Bad Request",
+            schema: {
+              $ref: "#/definitions/BadRequest",
+            },
+          },
+        },
+      },
+    },
+    "/country/": {
+      post: {
+        tags: ["Country"],
+        summary: "Add a new country",
+        parameters: [
+          {
+            name: "country",
+            in: "body",
+            description: "Country to be added",
+            schema: {
+              $ref: "#/definitions/NewCountryBody",
+            },
+          },
+        ],
+        responses: {
+          201: {
+            description: "Created",
+            schema: {
+              $ref: "#/definitions/CountryOkResponse",
+            },
+          },
+          400: {
+            description: "Bad Request",
+            schema: {
+              $ref: "#/definitions/BadRequest",
+            },
+          },
+        },
+      },
+    },
+  },
+    "/country/{id}": {
+      put: {
+        tags: ["country"],
+        summary: "Update a country",
+        parameters: [
+          {
+            name: "id",
+            in: "path",
+            description: "Id of the country to be updated",
+          },
+          {
+            name: "country",
+            in: "body",
+            description: "Country to be updated",
+            schema: {
+              $ref: "#/definitions/NewCountryBody",
+            },
+          },
+        ],
+        responses: {
+          200: {
+            description: "OK",
+            schema: {
+              $ref: "#/definitions/CountryOkResponse",
+            },
+          },
+          400: {
+            description: "Bad Request",
+            schema: {
+              $ref: "#/definitions/BadRequest",
+            },
+          },
+        },
+      },
+    },
+      "/country/{id}": {
+        delete: {
+          tags: ["Country"],
+          summary: "Country to be deleted",
+          parameters: [
+            {
+              name: "id",
+              in: "path",
+              description: "Id of the country to be deleted",
+            },
+          ],
+          responses: {
+            200: {
+              description: "OK",
+              schema: {
+                $ref: "#/definitions/EntryDeleted",
+              },
+            },
+            400: {
+              description: "Bad Request",
+              schema: {
+                $ref: "#/definitions/BadRequest",
+              },
+            },
+          },
+        },
+      },
+    },
+    
+
+
 
 
     definitions: {
-      Book: {
-        required: ["name", "author"],
+      CityOkResponse: {
+        required: ["cityName", "population", "country"],
         properties: {
           _id: {
             type: "string",
             uniqueItems: true,
           },
-          title: {
+          cityName: {
             type: "string",
           },
-          author: {
+          population: {
             type: "string",
           },
-          pages: {
-            type: "integer",
+          country: {
+            type: "string",
+          },
+        },
+      },
+
+      NewCityBody: {
+        required: ["cityName", "population", "country"],
+        properties: {
+          cityName: {
+            type: "string",
+          },
+          population: {
+            type: "string",
+          },
+          country: {
+            type: "string",
+          },
+        },
+      },
+
+      ContinentOkResponse: {
+        required: ["continentName", "countries_amount"],
+        properties: {
+          _id: {
+            type: "string",
+            uniqueItems: true,
+          },
+          continentName: {
+            type: "string",
+          },
+          countries_amount: {
+            type: "string",
+          },
+        },
+      },
+
+      NewContinentBody: {
+        required: ["continentName", "countries_amount"],
+        properties: {
+          continentName: {
+            type: "string",
+          },
+          countries_amount: {
+            type: "string",
+          },
+        },
+      },
+
+      CountryOkResponse: {
+        required: ["countryName", "capital"],
+        properties: {
+          _id: {
+            type: "string",
+            uniqueItems: true,
+          },
+          countryName: {
+            type: "string",
+          },
+          capital: {
+            type: "string",
+          },
+        },
+      },
+
+      NewCountryBody: {
+        required: ["countryName", "capital"],
+        properties: {
+          countryName: {
+            type: "string",
+          },
+          capital: {
+            type: "string",
+          },
+        },
+      },
+      EntryDeleted: {
+        properties: {
+          Geloescht: {
+            type: "string",
+          },
+        },
+      },
+      BadRequest: {
+        properties: {
+          errorMessage: {
+            type: "string",
           },
         },
       },
