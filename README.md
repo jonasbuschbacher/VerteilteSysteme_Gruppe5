@@ -10,6 +10,10 @@
 
 **Dozentin: Lisa Trovato-Monastra**
 
+## Run the app 🚀
+
+- all containers (frontend, backend, mongo): `cd simple-backend && npm run d-up`
+
 
 ## StädteInfos-API - Anwendungsszenario & Gesamt-Architektur
 

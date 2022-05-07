@@ -31,7 +31,7 @@ class App extends React.Component {
           {/* generates a div for every entry */}
           {this.state.allData.map((ad, key) => (
             <div key={key}>
-             Eintrag: {ad.cityName}. ID: {ad._id}
+             Eintrag: {ad.cityName} - Einwohneranzahl: {ad.population} - Land: {ad.country}
             </div>
           ))}
         </div>
