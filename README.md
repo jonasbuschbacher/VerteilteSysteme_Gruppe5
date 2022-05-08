@@ -10,14 +10,14 @@
 
 **Dozentin: Lisa Trovato-Monastra**
 
-## Run the app 
+## App ausführen
 
 - Alle Container (frontend, backend, mongo): `cd simple-backend && npm run d-up`
 
 
 ## StädteInfos-API - Anwendungsszenario & Gesamt-Architektur
 
-Die API stellt dem Anwender Informationen über Städte, Länder und Kontinente bereit. Die API ist somit die Grundlage für einen modernen Reiseführer, bei dem Nutzer  Informationen über Reiseziele abspeichern sowie abrufen können. Ein konkretes Anwendungszenario für den Service wäre eine Social-Media-Plattform im Bereich "Urlaub und Reise", bei dem jeder Anwender die Möglichkeit hat, die wichtigsten Daten und Fakten zu einem besuchten Reiseziel zu erfassen und diese Informationen mit anderen Nutzern zu teilen. Als Frontend des Services wäre neben einer Website auch eine einfache App denkbar, welche Eingaben des Anwenders entgegen nimmt, diese als Anfragen an die REST-API sendet und die Antwort der API darstellt.
+Die API stellt dem Anwender Informationen über Städte, Länder und Kontinente bereit. Die API ist somit die Grundlage für einen modernen Reiseführer, bei dem Nutzer  Informationen über Reiseziele abspeichern sowie abrufen können. Ein konkretes Anwendungszenario für den Service wäre eine Social-Media-Plattform im Bereich "Urlaub und Reise", bei dem jeder Anwender die Möglichkeit hat, die wichtigsten Daten und Fakten zu einem besuchten Reiseziel zu erfassen und diese Informationen mit anderen Nutzern zu teilen. Als Frontend des Services wäre neben einer Website auch eine einfache App denkbar, welche Eingaben des Anwenders entgegen nimmt, diese als Anfragen an die REST-API sendet und die Antwort der API dann über das frontend der App darstellt.
 
 ## Frage 1: Mögliche Probleme wenn der Service von mehreren Parteien verwendet wird
 
