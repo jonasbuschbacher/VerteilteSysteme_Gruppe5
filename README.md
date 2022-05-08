@@ -10,7 +10,7 @@
 
 **Dozentin: Lisa Trovato-Monastra**
 
-## Run the app 
+## App ausführen
 
 - Alle Container (frontend, backend, mongo): `cd simple-backend && npm run d-up`
 
