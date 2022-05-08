@@ -12,7 +12,7 @@
 
 ## App ausführen
 
-- Alle Container (frontend, backend, mongo): `cd simple-backend && npm run d-up`
+- Alle Container (frontend, backend, mongo): `cd city-backend && npm run d-up`
 
 
 ## StädteInfos-API - Anwendungsszenario & Gesamt-Architektur
