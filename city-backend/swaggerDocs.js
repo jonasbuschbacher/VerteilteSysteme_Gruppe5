@@ -9,8 +9,8 @@ const swaggerDocs = {
       url: "https://opensource.org/licenses/MIT",
     },
   },
-  host: "localhost:4000",
-  basePath: "/cities",
+  host: "localhost:3000",
+  basePath: "/",
   tags: [
     {
       name: "Cities",
@@ -28,7 +28,7 @@ const swaggerDocs = {
   consumes: ["application/json"],
   produces: ["application/json"],
   paths: {
-    "/cities": {
+    "/cities/": {
       get: {
         tags: ["Cities"],
         summary: "Get all Cities in the system",
@@ -75,7 +75,7 @@ const swaggerDocs = {
         },
       },
     },
-    "/search/{cityName}": {
+    "/cities/search/{cityName}": {
       get: {
         tags: ["Cities"],
         summary: "Get a specific city by name",
@@ -132,9 +132,9 @@ const swaggerDocs = {
         },
       },
     },
-    "/city/{id}": {
+    "/cities/{id}": {
       put: {
-        tags: ["City"],
+        tags: ["Cities"],
         summary: "Update a City",
         parameters: [
           {
@@ -167,9 +167,9 @@ const swaggerDocs = {
         },
       },
     },
-    "/city/{id}": {
+    "/cities/{id}": {
       delete: {
-        tags: ["City"],
+        tags: ["Cities"],
         summary: "City to be deleted",
         parameters: [
           {
@@ -195,11 +195,9 @@ const swaggerDocs = {
       },
     },
 
-
-
-    "/continent": {
+    "/continents/": {
       get: {
-        tags: ["Continent"],
+        tags: ["Continents"],
         summary: "Get all continents in the system",
         responses: {
           200: {
@@ -217,9 +215,9 @@ const swaggerDocs = {
         },
       },
     },
-    "/continent/{id}": {
+    "/continents/{id}": {
       get: {
-        tags: ["Continent"],
+        tags: ["Continents"],
         summary: "Get a specific continent by id",
         parameters: [
           {
@@ -244,9 +242,9 @@ const swaggerDocs = {
         },
       },
     },
-    "/search/{continentName}": {
+    "/continents/search/{continentName}": {
       get: {
-        tags: ["Continent"],
+        tags: ["Continents"],
         summary: "Get a specific continent by name",
         parameters: [
           {
@@ -271,9 +269,9 @@ const swaggerDocs = {
         },
       },
     },
-    "/continent/": {
+    "/continents/": {
       post: {
-        tags: ["Continent"],
+        tags: ["Continents"],
         summary: "Add a new continent",
         parameters: [
           {
@@ -302,9 +300,9 @@ const swaggerDocs = {
       },
     },
   },
-  "/continent/{id}": {
+  "/continents/{id}": {
     put: {
-      tags: ["Continent"],
+      tags: ["Continents"],
       summary: "Update a continent",
       parameters: [
         {
@@ -337,9 +335,9 @@ const swaggerDocs = {
       },
     },
   },
-  "/continent/{id}": {
+  "/continents/{id}": {
     delete: {
-      tags: ["Continent"],
+      tags: ["Continents"],
       summary: "Continent to be deleted",
       parameters: [
         {
@@ -367,9 +365,9 @@ const swaggerDocs = {
 
 
 
-  "/country": {
+  "/countries/": {
     get: {
-      tags: ["Country"],
+      tags: ["Countries"],
       summary: "Get all countries in the system",
       responses: {
         200: {
@@ -387,9 +385,9 @@ const swaggerDocs = {
       },
     },
   },
-  "/country/{id}": {
+  "/countries/{id}": {
     get: {
-      tags: ["Country"],
+      tags: ["Countries"],
       summary: "Get a specific country by id",
       parameters: [
         {
@@ -414,9 +412,9 @@ const swaggerDocs = {
       },
     },
   },
-  "/search/{countryName}": {
+  "/countries/search/{countryName}": {
     get: {
-      tags: ["Country"],
+      tags: ["Countries"],
       summary: "Get a specific country by name",
       parameters: [
         {
@@ -441,9 +439,9 @@ const swaggerDocs = {
       },
     },
   },
-  "/country/": {
+  "/countries/": {
     post: {
-      tags: ["Country"],
+      tags: ["Countries"],
       summary: "Add a new country",
       parameters: [
         {
@@ -471,9 +469,9 @@ const swaggerDocs = {
       },
     },
   },
-  "/country/{id}": {
+  "/countries/{id}": {
     put: {
-      tags: ["country"],
+      tags: ["Countries"],
       summary: "Update a country",
       parameters: [
         {
@@ -506,9 +504,9 @@ const swaggerDocs = {
       },
     },
   },
-  "/country/{id}": {
+  "/countries/{id}": {
     delete: {
-      tags: ["Country"],
+      tags: ["Countries"],
       summary: "Country to be deleted",
       parameters: [
         {
