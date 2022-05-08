@@ -9,7 +9,7 @@ const swaggerDocs = {
       url: "https://opensource.org/licenses/MIT",
     },
   },
-  host: "localhost:3000",
+  host: "localhost:4000",
   basePath: "/",
   tags: [
     {
@@ -17,12 +17,12 @@ const swaggerDocs = {
       description: "cities in the database",
     },
     {
-      name: "Countries",
-      description: "countries in the database",
-    },
-    {
       name: "Continents",
       description: "continents in the database",
+    },
+    {
+      name: "Countries",
+      description: "countries in the database",
     },
   ],
   consumes: ["application/json"],
@@ -299,8 +299,7 @@ const swaggerDocs = {
         },
       },
     },
-  },
-  "/continents/{id}": {
+   "/continents/{id}": {
     put: {
       tags: ["Continents"],
       summary: "Update a continent",
@@ -334,8 +333,10 @@ const swaggerDocs = {
         },
       },
     },
-  },
-  "/continents/{id}": {
+   },
+    
+  
+   "/continents/{id}": {
     delete: {
       tags: ["Continents"],
       summary: "Continent to be deleted",
@@ -361,11 +362,11 @@ const swaggerDocs = {
         },
       },
     },
-  },
+   },
 
 
 
-  "/countries/": {
+   "/countries/": {
     get: {
       tags: ["Countries"],
       summary: "Get all countries in the system",
@@ -384,8 +385,8 @@ const swaggerDocs = {
         },
       },
     },
-  },
-  "/countries/{id}": {
+   },
+   "/countries/{id}": {
     get: {
       tags: ["Countries"],
       summary: "Get a specific country by id",
@@ -411,8 +412,8 @@ const swaggerDocs = {
         },
       },
     },
-  },
-  "/countries/search/{countryName}": {
+   },
+   "/countries/search/{countryName}": {
     get: {
       tags: ["Countries"],
       summary: "Get a specific country by name",
@@ -438,8 +439,8 @@ const swaggerDocs = {
         },
       },
     },
-  },
-  "/countries/": {
+   },
+   "/countries/": {
     post: {
       tags: ["Countries"],
       summary: "Add a new country",
@@ -468,8 +469,8 @@ const swaggerDocs = {
         },
       },
     },
-  },
-  "/countries/{id}": {
+   },
+   "/countries/{id}": {
     put: {
       tags: ["Countries"],
       summary: "Update a country",
@@ -503,8 +504,8 @@ const swaggerDocs = {
         },
       },
     },
-  },
-  "/countries/{id}": {
+   },
+   "/countries/{id}": {
     delete: {
       tags: ["Countries"],
       summary: "Country to be deleted",
@@ -554,7 +555,7 @@ const swaggerDocs = {
 
     NewCityBody: {
       required: ["cityName", "population", "country"],
-      properties: {
+      properties: {        
         cityName: {
           type: "string",
         },
@@ -614,7 +615,7 @@ const swaggerDocs = {
     NewCountryBody: {
       required: ["countryName", "capital"],
       properties: {
-        countryName: {
+       countryName: {
           type: "string",
         },
         capital: {
@@ -636,6 +637,8 @@ const swaggerDocs = {
         },
       },
     },
+  },
+
   },
 };
 
